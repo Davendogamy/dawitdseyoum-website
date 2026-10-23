@@ -25,7 +25,7 @@ jobs:
       - name: Keep the repository clean (guard files)
         run: |
           printf 'node_modules/\n.next/\nout/\ndev.log\nserver.log\n' > .gitignore
-          printf 'source/\n.github/\nUPDATE-README.txt\n' > .assetsignore
+          printf 'node_modules\n.next\nout\n.git\nsource/\n.github/\nUPDATE-README.txt\n' > .assetsignore
 
       - name: Set up Node
         uses: actions/setup-node@v4
