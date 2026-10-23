@@ -1,0 +1,63 @@
+name: Self-sync from Bluesky
+
+on:
+  schedule:
+    - cron: "37 5 * * *"   # daily check at 05:37 UTC
+  workflow_dispatch:        # adds a manual "Run workflow" button
+
+permissions:
+  contents: write
+
+concurrency:
+  group: self-sync
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Check out the site
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        working-directory: source
+        run: npm install --no-audit --no-fund
+
+      - name: Generate Prisma client
+        working-directory: source
+        run: npx prisma generate
+
+      - name: Check Bluesky for new photographs
+        working-directory: source
+        run: python3 scripts/sync_bluesky.py
+
+      - name: Rebuild the static site
+        working-directory: source
+        run: npm run build:static
+
+      - name: Move fresh build to the website root
+        run: |
+          rsync -a --delete \
+            --exclude='.git/' \
+            --exclude='.github/' \
+            --exclude='source/' \
+            --exclude='UPDATE-README.txt' \
+            source/out/ ./
+
+      - name: Commit and push (this redeploys Cloudflare)
+        run: |
+          git config user.name  "dawit-self-sync"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No new photographs - nothing to do."
+          else
+            git commit -m "sync: new photographs from Bluesky [auto]"
+            git push
+          fi
