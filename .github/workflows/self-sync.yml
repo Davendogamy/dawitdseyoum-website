@@ -15,10 +15,17 @@ concurrency:
 jobs:
   sync:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 40
     steps:
       - name: Check out the site
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Keep the repository clean (guard files)
+        run: |
+          printf 'node_modules/\n.next/\nout/\ndev.log\nserver.log\n' > .gitignore
+          printf 'source/\n.github/\nUPDATE-README.txt\n' > .assetsignore
 
       - name: Set up Node
         uses: actions/setup-node@v4
@@ -47,8 +54,14 @@ jobs:
             --exclude='.git/' \
             --exclude='.github/' \
             --exclude='source/' \
+            --exclude='.gitignore' \
+            --exclude='.assetsignore' \
             --exclude='UPDATE-README.txt' \
             source/out/ ./
+
+      - name: Evict any build intermediates already tracked in git
+        run: |
+          git rm -r --cached source/node_modules source/.next source/out >/dev/null 2>&1 || true
 
       - name: Commit and push (this redeploys Cloudflare)
         run: |
@@ -58,6 +71,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No new photographs - nothing to do."
           else
-            git commit -m "sync: new photographs from Bluesky [auto]"
+            git commit -m "sync: housekeeping + new photographs from Bluesky [auto]"
             git push
           fi

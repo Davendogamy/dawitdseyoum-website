@@ -41,6 +41,8 @@ rsync -a \
   "$STAGE/source/"
 
 cp "$ASSETS/self-sync.yml"      "$STAGE/.github/workflows/self-sync.yml"
+cp "$ASSETS/gitignore"          "$STAGE/.gitignore"
+cp "$ASSETS/assetsignore"       "$STAGE/.assetsignore"
 cp "$ASSETS/UPDATE-README.txt"  "$STAGE/UPDATE-README.txt"
 
 echo "== 2. staged pipeline test (path-portability + Bluesky reach) =="
@@ -50,13 +52,13 @@ python3 scripts/sync_bluesky.py
 echo "== 3. packaging =="
 rm -f "$ZIP"
 cd "$STAGE"
-zip -qr "$ZIP" .github source UPDATE-README.txt
+zip -qr "$ZIP" .github source .gitignore .assetsignore UPDATE-README.txt
 
 echo "---- verification ----"
 unzip -l "$ZIP" | head -6
 unzip -l "$ZIP" | tail -4
 echo "key files present:"
-unzip -l "$ZIP" | grep -E 'self-sync.yml|sync_bluesky.py|photos_clean.json|sync_state.json|photos.ts|UPDATE-README' || true
+unzip -l "$ZIP" | grep -E 'self-sync.yml|sync_bluesky.py|photos_clean.json|sync_state.json|photos.ts|UPDATE-README|gitignore|assetsignore' || true
 echo "image count in package:"
 unzip -l "$ZIP" | grep -c 'public/images/.*webp' || true
 du -h "$ZIP"
