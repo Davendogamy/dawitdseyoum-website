@@ -1,6 +1,128 @@
 {
- "fetchedAt": "2026-11-02T06:34:19.124551+00:00",
+ "fetchedAt": "2026-11-03T06:29:42.568718+00:00",
  "feed": [
+  {
+   "post": {
+    "uri": "at://did:plc:pt6ulmvheyuxfmtpspr25wos/app.bsky.feed.post/3mze2umbt4s25",
+    "cid": "bafyreidmmjw2ku4fltxhgan3pohn37o5kchnofxsnjz43q4ug63to66zx4",
+    "author": {
+     "did": "did:plc:pt6ulmvheyuxfmtpspr25wos",
+     "handle": "dadasese69.bsky.social",
+     "displayName": "Dawit D. Seyoum (DadaSese69)",
+     "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:pt6ulmvheyuxfmtpspr25wos/bafkreihsablqhgewwu6nilw2w5otalzxgh57dqzchcwokyicp42bovxzby",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none",
+       "allowGroupInvites": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "labels": [],
+     "createdAt": "2024-04-14T16:21:41.213Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-02T19:32:33.816Z",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "alt": "",
+        "aspectRatio": {
+         "height": 3300,
+         "width": 2550
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreibf6xmo3lboagbvaxjcmepcxb2emxccmexmrw43m4xb2ornfi3k74"
+         },
+         "mimeType": "image/jpeg",
+         "size": 770302
+        }
+       }
+      ]
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#tag",
+         "tag": "visualexcellencephotography"
+        }
+       ],
+       "index": {
+        "byteEnd": 115,
+        "byteStart": 87
+       }
+      },
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#tag",
+         "tag": "EyeInTheCity"
+        }
+       ],
+       "index": {
+        "byteEnd": 129,
+        "byteStart": 116
+       }
+      },
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#tag",
+         "tag": "FineArtCollectors"
+        }
+       ],
+       "index": {
+        "byteEnd": 148,
+        "byteStart": 130
+       }
+      },
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#tag",
+         "tag": "CuratedArt"
+        }
+       ],
+       "index": {
+        "byteEnd": 160,
+        "byteStart": 149
+       }
+      }
+     ],
+     "langs": [
+      "dz"
+     ],
+     "text": "\"Never say non't\"\nID: NIM_3454_Lr-2.dng_Lr_Prt_A4\nTime: 06:58:25\nPhoto by ig:Dadasese6\n#visualexcellencephotography\n#EyeInTheCity #FineArtCollectors\n#CuratedArt  \n\nNever say never. Never say no. \"Never say non't\"\n\nCasa della Memoria, close to Bosco Verticale (along Via Gaetano de Castillia), Milano."
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:pt6ulmvheyuxfmtpspr25wos/bafkreibf6xmo3lboagbvaxjcmepcxb2emxccmexmrw43m4xb2ornfi3k74",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:pt6ulmvheyuxfmtpspr25wos/bafkreibf6xmo3lboagbvaxjcmepcxb2emxccmexmrw43m4xb2ornfi3k74",
+       "alt": "",
+       "aspectRatio": {
+        "height": 3300,
+        "width": 2550
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 0,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-02T19:32:38.276Z",
+    "labels": []
+   }
+  },
   {
    "post": {
     "uri": "at://did:plc:pt6ulmvheyuxfmtpspr25wos/app.bsky.feed.post/3myc5ajcjyc2q",

@@ -56,6 +56,20 @@ export const SOCIALS = [
 
 export const photos: Photo[] = [
   {
+    id: "104-never-say-non-t",
+    title: "Never say non't",
+    caption: "Never say never. Never say no. \"Never say non't\"\n\nCasa della Memoria, close to Bosco Verticale (along Via Gaetano de Castillia), Milano.",
+    alt: "Never say never. Never say no. \"Never say non't\"\n\nCasa della Memoria, close to Bosco Verticale (along Via Gaetano de Castillia), Milano.",
+    date: "2026-11-02",
+    time: "06:58:25",
+    fileId: "NIM_3454_Lr-2.dng_Lr_Prt_A4",
+    tags: ["visualexcellencephotography", "EyeInTheCity", "FineArtCollectors", "CuratedArt"],
+    src: "/images/104-never-say-non-t.webp",
+    w: 2550, h: 3300,
+    series: "builders" as SeriesId,
+    bskyUrl: "https://bsky.app/profile/dadasese69.bsky.social/post/3mze2umbt4s25",
+  },
+  {
     id: "001-windowsill",
     title: "Windowsill",
     caption: "",
