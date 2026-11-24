@@ -56,6 +56,20 @@ export const SOCIALS = [
 
 export const photos: Photo[] = [
   {
+    id: "105-residence",
+    title: "Residence",
+    caption: "Archival pigment print, [2026]\n\nThe building was drawn before anyone lived in it. The pigeon arrived after.",
+    alt: "Archival pigment print, [2026]\n\nThe building was drawn before anyone lived in it. The pigeon arrived after.",
+    date: "2026-11-24",
+    time: "09:02:23",
+    fileId: "NIO_1074.NEF_Lr_Prt_A4",
+    tags: ["visualexcellencephotography", "EyeInTheCity", "FineArtCollectors", "CuratedArt"],
+    src: "/images/105-residence.webp",
+    w: 2550, h: 3300,
+    series: "witnesses" as SeriesId,
+    bskyUrl: "https://bsky.app/profile/dadasese69.bsky.social/post/3n32nsdohwk2m",
+  },
+  {
     id: "104-never-say-non-t",
     title: "Never say non't",
     caption: "Never say never. Never say no. \"Never say non't\"\n\nCasa della Memoria, close to Bosco Verticale (along Via Gaetano de Castillia), Milano.",
