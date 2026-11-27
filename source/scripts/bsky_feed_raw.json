@@ -1,10 +1,10 @@
 {
- "fetchedAt": "2026-11-26T15:42:36.334120+00:00",
+ "fetchedAt": "2026-11-27T15:31:42.690658+00:00",
  "feed": [
   {
    "post": {
-    "uri": "at://did:plc:pt6ulmvheyuxfmtpspr25wos/app.bsky.feed.post/3n32nsdohwk2m",
-    "cid": "bafyreieu4rk6xebx55kdljlwiycpke2iouek7rkxxjkyowis57apu3cbka",
+    "uri": "at://did:plc:pt6ulmvheyuxfmtpspr25wos/app.bsky.feed.post/3n3chptkh422r",
+    "cid": "bafyreiarloehlonrtozyostr2diwljdu4f3ttx6ei4yrdf4py3dozdyiey",
     "author": {
      "did": "did:plc:pt6ulmvheyuxfmtpspr25wos",
      "handle": "dadasese69.bsky.social",
@@ -24,7 +24,7 @@
     },
     "record": {
      "$type": "app.bsky.feed.post",
-     "createdAt": "2026-11-24T12:35:04.652Z",
+     "createdAt": "2026-11-27T15:07:36.086Z",
      "embed": {
       "$type": "app.bsky.embed.images",
       "images": [
@@ -54,8 +54,8 @@
         }
        ],
        "index": {
-        "byteEnd": 113,
-        "byteStart": 85
+        "byteEnd": 112,
+        "byteStart": 84
        }
       },
       {
@@ -66,8 +66,8 @@
         }
        ],
        "index": {
-        "byteEnd": 127,
-        "byteStart": 114
+        "byteEnd": 126,
+        "byteStart": 113
        }
       },
       {
@@ -78,8 +78,8 @@
         }
        ],
        "index": {
-        "byteEnd": 146,
-        "byteStart": 128
+        "byteEnd": 145,
+        "byteStart": 127
        }
       },
       {
@@ -90,15 +90,15 @@
         }
        ],
        "index": {
-        "byteEnd": 158,
-        "byteStart": 147
+        "byteEnd": 157,
+        "byteStart": 146
        }
       }
      ],
      "langs": [
       "dz"
      ],
-     "text": "\"Residence\"\nArchival pigment print, [2026]\nID: NIO_1074.NEF_Lr_Prt_A4\nTime:09:02:23\n\n#visualexcellencephotography\n#EyeInTheCity #FineArtCollectors\n#CuratedArt  \n\nThe building was drawn before anyone lived in it. The pigeon arrived after."
+     "text": "\"Residence\"\nArchival pigment print, 2026.\nID: NIO_1074.NEF_Lr_Prt_A4\nTime:09:02:23\n\n#visualexcellencephotography\n#EyeInTheCity #FineArtCollectors\n#CuratedArt  \n\nA curve appears where straight lines live. A subtle disruption of the ordinary life."
     },
     "embed": {
      "images": [
@@ -119,7 +119,7 @@
     "repostCount": 0,
     "likeCount": 0,
     "quoteCount": 0,
-    "indexedAt": "2026-11-24T12:35:10.450Z",
+    "indexedAt": "2026-11-27T15:07:41.952Z",
     "labels": []
    }
   },
